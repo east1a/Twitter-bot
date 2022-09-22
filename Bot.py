@@ -1,11 +1,11 @@
 import tweepy
 import time
 
-bearerToken =  'AAAAAAAAAAAAAAAAAAAAAF6ZbQEAAAAAHav7fG49AzdG1ToSh3kTEabeQYs%3D3bPQzsVkUa7bhaBxHeC2TYVjBqcDL2bo5VdsTjAKlp3FrZcOfy'
-apiKey = 'IyXNY0859xdxNlQNZkPDXZrCP'
-apiKeySecret = 'qWMHKxN8lfwcmulcwdNaSiXTiI0woW0fupqejRoUguUSZxUUvQ'
-accessToken = '1513691830323273729-9z9o2tuTlRYDN2TvcjsmDBtbNmbfMB'
-accessTokenSecret = 'LWSXci3hJ0xSLBJY56qqmFmpqzUG8j9lOUh2FMqmAjfZZ'
+bearerToken =  'ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ'
+apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
+apiKeySecret = 'XXXXXXXXXXXXXXXXXXXX'
+accessToken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+accessTokenSecret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 
 class Stream(tweepy.StreamingClient):
