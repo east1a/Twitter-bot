@@ -48,5 +48,5 @@ Client = tweepy.Client(consumer_key=apiKey, consumer_secret= apiKeySecret, acces
 #stream.filter(tweet_fields=["referenced_tweets"])
 #response = api.get_users_tweets(user_id)
 #get_user_id("Whale_alert")
-stream.filter(follow=whaleAlertID)
+stream.filter(follow=[whaleAlertID])
 #get_specific_tweets(whaleAlertID, 10, "BTC")
