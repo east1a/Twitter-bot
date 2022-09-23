@@ -3,11 +3,11 @@ from pickle import TRUE
 import tweepy
 import time
 
-bearerToken =  'AAAAAAAAAAAAAAAAAAAAAF6ZbQEAAAAAvfEb2M6Of4TzKnSDMwLz4Orcha0%3DhJJP8PWxPN3Mc0F3VQGkMlP0N8azHM64SG2mn3XCR4cMPQ41mQ'
-apiKey = 'IyXNY0859xdxNlQNZkPDXZrCP'
-apiKeySecret = 'qWMHKxN8lfwcmulcwdNaSiXTiI0woW0fupqejRoUguUSZxUUvQ'
-accessToken = '1513691830323273729-9z9o2tuTlRYDN2TvcjsmDBtbNmbfMB'
-accessTokenSecret = 'LWSXci3hJ0xSLBJY56qqmFmpqzUG8j9lOUh2FMqmAjfZZ'
+bearerToken =  'XXXXXXX'
+apiKey = 'XXXXXXX'
+apiKeySecret = 'XXXXXXX'
+accessToken = 'XXXXXXX'
+accessTokenSecret = 'XXXXXXX'
 hashtag = '#btc'
 whaleAlertID = 1039833297751302144
 search_terms = ["btc", "bitcoin"]
