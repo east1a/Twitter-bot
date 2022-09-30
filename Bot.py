@@ -3,14 +3,13 @@ from pickle import TRUE
 import tweepy
 import time
 
-bearerToken =  'XXXXXXX%XXXXXXX'
+bearerToken =  'Your bearer token here'
 apiKey = 'XXXXXXX'
 apiKeySecret = 'XXXXXXX'
 accessToken = 'XXXXXXX-XXXXXXX'
 accessTokenSecret = 'XXXXXXX'
-hashtag = '#btc'
 whaleAlertID = 1039833297751302144
-search_terms = ["btc", "bitcoin"]
+
 Client = tweepy.Client(consumer_key=apiKey, consumer_secret= apiKeySecret, access_token= accessToken, access_token_secret= accessTokenSecret)
 auth = tweepy.OAuth1UserHandler(apiKey, apiKeySecret)
 api = tweepy.API(auth)
@@ -22,7 +21,7 @@ class Stream(tweepy.StreamingClient):
     def on_connect(self):
         print("Connected")
 
-    #upon encountering a tweet in the stream, it will print the tweet and wait .2 second until it starts looking for more tweets
+    #upon encountering a tweet in the stream, it will print the tweet and then retweet it from the bot account
     def on_tweet(self, tweet):
         print(tweet.text)
         try:
@@ -52,21 +51,17 @@ def get_user_id(screen_name):
     print("ID of the user is : " + ID)
 
 stream = Stream(bearer_token = bearerToken)
-rule = tweepy.StreamRule(
-    {
-        "value": "(#BTC) (from:whale_alert OR from:whaleAlertID) (-is:retweet)",
-        "tag": "(#BTC)"
-    }
+rules = tweepy.StreamRule(
+ "(from:whale_alert) (#BTC) (-is:retweet)"
 )
-stream.add_rules(rule)
+
+stream.add_rules(rules)
 print(stream.get_rules())
 stream.filter()
 
 
 #stream.filter(tweet_fields=["referenced_tweets"])
-#response = api.get_users_tweets(user_id)
 #get_user_id("@whale_alert")
 #get_specific_tweets(whaleAlertID, 40, "#BTC")
 #for rules in stream.get_rules()[0]:
 #    stream.delete_rules("1575397673670090752")
-#    stream.delete_rules("1573402414463401984")
