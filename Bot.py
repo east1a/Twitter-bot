@@ -1,13 +1,14 @@
 from operator import contains
 from pickle import TRUE
+import os
 import tweepy
 import time
 
-bearerToken =  'Your bearer token here'
-apiKey = 'XXXXXXX'
-apiKeySecret = 'XXXXXXX'
-accessToken = 'XXXXXXX-XXXXXXX'
-accessTokenSecret = 'XXXXXXX'
+bearerToken =  os.getenv('TWEEPY_BEARER_TOKEN')
+apiKey = os.getenv('TWEEPY_API_KEY')
+apiKeySecret = os.getenv('TWEEPY_API_KEY_SECRET')
+accessToken = os.getenv('TWEEPY_ACCESS_TOKEN')
+accessTokenSecret = os.getenv('TWEEPY_ACCESS_TOKEN_SECRET')
 whaleAlertID = 1039833297751302144
 
 Client = tweepy.Client(consumer_key=apiKey, consumer_secret= apiKeySecret, access_token= accessToken, access_token_secret= accessTokenSecret)
